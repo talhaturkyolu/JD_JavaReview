@@ -3,6 +3,7 @@ package com.cybertek;
 import com.cybertek.core.Loops;
 import com.cybertek.core.Methods;
 import com.cybertek.core.SelectionStatements;
+import com.cybertek.oop.abstraction.service.UserService;
 import com.cybertek.oop.encapsulation.Role;
 import com.cybertek.oop.encapsulation.User;
 import com.cybertek.oop.inheritance.Project;
@@ -39,7 +40,9 @@ public class Main {
                 new User("Mike","Smith",new Role(1,"Manager")),
                 LocalDate.now(),LocalDate.now().plusMonths(6),"IN_PROGRESS","HCRM Detail Information");
 
-
+        //*******OOP-Interface*******//
+        UserService userService = new UserService();
+        System.out.println(userService.userByFirstName("Mike").getLastName());
 
 
 
