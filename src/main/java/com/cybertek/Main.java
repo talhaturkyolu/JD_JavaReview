@@ -3,6 +3,7 @@ package com.cybertek;
 import com.cybertek.core.Loops;
 import com.cybertek.core.Methods;
 import com.cybertek.core.SelectionStatements;
+import com.cybertek.enums.Gender;
 import com.cybertek.oop.abstraction.implementation.UserServiceImplementation;
 import com.cybertek.oop.abstraction.service.UserService;
 import com.cybertek.oop.encapsulation.Role;
@@ -33,14 +34,14 @@ public class Main {
         SelectionStatements.demoSwitchCaseStatement();
 
         //*******OOP-Encapsulation*******//
-        User user = new User("Mike","Smith",new Role(2,"Manager"));
+        User user = new User("Mike","Smith",new Role(2,"Manager"), Gender.MALE);
         System.out.println(user.getFirstName());
         System.out.println(user.getLastName());
         System.out.println(user.getRole().getDescription());
 
         //*******OOP-Inheritance*******//
         Project project = new Project(1,LocalDateTime.now(),1,LocalDateTime.now().minusHours(5),1,"PRJ001", "Human Resource CRM",
-                new User("Mike","Smith",new Role(1,"Manager")),
+                new User("Mike","Smith",new Role(1,"Manager"),Gender.MALE),
                 LocalDate.now(),LocalDate.now().plusMonths(6),"IN_PROGRESS","HCRM Detail Information");
 
         //*******OOP-Interface*******//
