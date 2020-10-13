@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Getter
 @Setter
-public class BaseEntity {
+public abstract class BaseEntity {
     private long id;
     private LocalDateTime insertDateTime;
     private long insertUserId;

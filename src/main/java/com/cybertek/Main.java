@@ -3,8 +3,13 @@ package com.cybertek;
 import com.cybertek.core.Loops;
 import com.cybertek.core.Methods;
 import com.cybertek.core.SelectionStatements;
+import com.cybertek.oop.abstraction.service.UserService;
 import com.cybertek.oop.encapsulation.Role;
 import com.cybertek.oop.encapsulation.User;
+import com.cybertek.oop.inheritance.Project;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 public class Main {
@@ -31,8 +36,35 @@ public class Main {
         System.out.println(user.getRole().getDescription());
 
         //*******OOP-Inheritance*******//
+        Project project = new Project(1,LocalDateTime.now(),1,LocalDateTime.now().minusHours(5),1,"PRJ001", "Human Resource CRM",
+                new User("Mike","Smith",new Role(1,"Manager")),
+                LocalDate.now(),LocalDate.now().plusMonths(6),"IN_PROGRESS","HCRM Detail Information");
 
-        //Project Object
+        //*******OOP-Interface*******//
+        UserService userService = new UserService();
+        System.out.println(userService.userByFirstName("Mike").getLastName());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

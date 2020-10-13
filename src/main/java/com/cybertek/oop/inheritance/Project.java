@@ -24,8 +24,8 @@ public class Project extends BaseEntity {
     private String projectDetail;
 
     public Project(long id, LocalDateTime insertDateTime, long insertUserId, LocalDateTime lastUpdateDateTime,
-                   long lastUpdateUserId, String projectCode, String projectName, User assignedManager, LocalDate startDate,
-                   LocalDate endDate, String projectStatus, String projectDetail) {
+                   long lastUpdateUserId, String projectCode, String projectName,
+                   User assignedManager, LocalDate startDate, LocalDate endDate, String projectStatus, String projectDetail) {
         super(id, insertDateTime, insertUserId, lastUpdateDateTime, lastUpdateUserId);
         this.projectCode = projectCode;
         this.projectName = projectName;
