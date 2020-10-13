@@ -3,10 +3,13 @@ package com.cybertek;
 import com.cybertek.core.Loops;
 import com.cybertek.core.Methods;
 import com.cybertek.core.SelectionStatements;
+import com.cybertek.oop.abstraction.implementation.UserServiceImplementation;
 import com.cybertek.oop.abstraction.service.UserService;
 import com.cybertek.oop.encapsulation.Role;
 import com.cybertek.oop.encapsulation.User;
+import com.cybertek.oop.inheritance.BaseEntity;
 import com.cybertek.oop.inheritance.Project;
+import com.cybertek.oop.polymorphism.Employee;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -43,6 +46,20 @@ public class Main {
         //*******OOP-Interface*******//
         UserService userService = new UserService();
         System.out.println(userService.userByFirstName("Mike").getLastName());
+
+        //*******OOP-Polymorphism*******//
+        Employee employee = new Employee();
+        BaseEntity employee2 = new Employee();
+        UserServiceImplementation userServiceImplementation = new UserService();
+
+        employee.getEmployeeHours();
+
+        ((Employee)employee2).getEmployeeHours(); //Down Casting
+
+
+
+
+
 
 
 
