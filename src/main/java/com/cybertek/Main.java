@@ -57,6 +57,10 @@ public class Main {
 
         ((Employee)employee2).getEmployeeHours(); //Down Casting
 
+        //*******ENUM*******//
+        System.out.println(Gender.FEMALE);
+
+
 
 
 
