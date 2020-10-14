@@ -4,6 +4,7 @@ import com.cybertek.core.Loops;
 import com.cybertek.core.Methods;
 import com.cybertek.core.SelectionStatements;
 import com.cybertek.enums.Gender;
+import com.cybertek.enums.Status;
 import com.cybertek.oop.abstraction.implementation.UserServiceImplementation;
 import com.cybertek.oop.abstraction.service.UserService;
 import com.cybertek.oop.encapsulation.Role;
@@ -42,7 +43,7 @@ public class Main {
         //*******OOP-Inheritance*******//
         Project project = new Project(1,LocalDateTime.now(),1,LocalDateTime.now().minusHours(5),1,"PRJ001", "Human Resource CRM",
                 new User("Mike","Smith",new Role(1,"Manager"),Gender.MALE),
-                LocalDate.now(),LocalDate.now().plusMonths(6),"IN_PROGRESS","HCRM Detail Information");
+                LocalDate.now(),LocalDate.now().plusMonths(6),Status.IN_PROGRESS,"HCRM Detail Information");
 
         //*******OOP-Interface*******//
         UserService userService = new UserService();
@@ -59,6 +60,7 @@ public class Main {
 
         //*******ENUM*******//
         System.out.println(Gender.FEMALE);
+        System.out.println(Status.IN_PROGRESS.getValue().substring(2));
 
 
 
