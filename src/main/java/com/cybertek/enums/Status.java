@@ -4,6 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
+/*Need to create constructor. Because it is final and static.
+Status(String value) {
+        this.value = value;
+    }
+ */
 @AllArgsConstructor
 public enum Status {
 
